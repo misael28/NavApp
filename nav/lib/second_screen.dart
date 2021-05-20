@@ -19,9 +19,10 @@ class SecondScreen extends StatelessWidget {
         children: [
           ElevatedButton(
             onPressed: () {
-               Navigator.push(context, 
-               MaterialPageRoute(builder: (context) => ThirdScreen()),
-               );
+               Navigator.pushNamed(
+                 context, 'third',
+                 arguments: Colors.red, 
+                 );
             },
             child: Text(
               'Third Screen'
@@ -29,7 +30,8 @@ class SecondScreen extends StatelessWidget {
                       ElevatedButton(
             onPressed: () {
                Navigator.push(context, 
-               MaterialPageRoute(builder: (context) => FourthScreen()),
+               MaterialPageRoute(builder: (context) => FourthScreen(
+                 dados: ThisArguments('nome',12),)),
                );
             },
             child: Text(

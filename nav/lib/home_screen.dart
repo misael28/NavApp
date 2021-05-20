@@ -21,9 +21,7 @@ class HomeScreen extends StatelessWidget {
             )),
                       ElevatedButton(
             onPressed: () {
-               Navigator.push(context, 
-               MaterialPageRoute(builder: (context) => ThirdScreen()),
-               );
+              Navigator.pushNamed(context, 'third', arguments: Colors.yellow);
             },
             child: Text(
               'Third Screen'

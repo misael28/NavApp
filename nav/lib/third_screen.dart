@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 class ThirdScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final Color color = ModalRoute.of(context).settings.arguments; 
     return Scaffold(
+      backgroundColor: color ?? Colors.black,
       appBar: AppBar(
         title: Text("Third screen"),
         ),
@@ -14,6 +16,7 @@ class ThirdScreen extends StatelessWidget {
           Center(
             child: 
             Container(
+              color: Colors.black,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -23,6 +26,7 @@ class ThirdScreen extends StatelessWidget {
                   }, 
                   child: Text("Fourth Screen")
                   ),
+                  
                   ElevatedButton(
                   onPressed: (){
                     Navigator.pushNamed(context, "home");

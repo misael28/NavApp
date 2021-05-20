@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         'home': (context) => HomeScreen(),
         'second': (context) => SecondScreen(),
         'third' : (context) => ThirdScreen(),
-        'fourth' : (context) => FourthScreen()
+        'fourth' : (context) => FourthScreen(dados: ThisArguments('nome',12),)
       },
     );
   }
